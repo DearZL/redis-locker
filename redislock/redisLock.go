@@ -45,7 +45,7 @@ var (
 
 const (
 	// LockPrefix 锁前缀
-	LockPrefix = "CtraLocker:"
+	LockPrefix = "RedisLocker:"
 	// MinRetryDelay 最小重试间隔
 	MinRetryDelay = 100 * time.Millisecond
 	// MinExpiration 最小过期时间
