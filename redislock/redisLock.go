@@ -96,6 +96,9 @@ func NewRedisLock(client *redis.Client, config Config, logger logx.Logger) *Redi
 			config.RetryDelay = MinRetryDelay
 		}
 	}
+	if logger == nil {
+		logger = logx.WithContext(context.Background())
+	}
 
 	return &RedisLock{
 		logger: logger,
